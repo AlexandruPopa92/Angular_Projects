@@ -1,0 +1,12 @@
+
+<div style="text-align:center">
+  <h2>Restfull Tasks API</h2>
+  <button (click)="getTasksFromService()" >Get All Tasks</button>
+  <h4 *ngIf ="tasks"></h4>
+  <p *ngFor="let task of tasks">{{task.title}} 
+    <button (click)="showTask(task._id)">Show</button>
+  </p>
+  <div *ngIf ="onetask" class="response">{{onetask.description}}</div>
+</div>
+ <router-outlet></router-outlet>
+ 
